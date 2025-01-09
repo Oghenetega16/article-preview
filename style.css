@@ -69,8 +69,8 @@ main .body-text p {
 }
 
 .profile-pic {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
 }
 
@@ -90,18 +90,23 @@ main .body-text p {
     font-weight: 500;
 }
 
+.link svg {
+    fill: var(--grayish-blue);
+    cursor: pointer;
+}
+
 .share {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     background-color: var(--light-grayish-blue);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-left: 55px;
+    margin-left: 3.4rem;
 }
 
-#share_mobile {
+.share_mobile {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -110,15 +115,10 @@ main .body-text p {
     margin-top: 1rem;
     padding: 1rem 2rem;
     border-radius: 0 0 0.6rem 0.6rem;
-    display: none;
 }
 
-#share .share {
-    background-color: var(--desaturated-dark-blue)
-}
-
-#share .share .icon{
-    fill: var(--light-grayish-blue);
+.share .icon{
+    fill: var(--desaturated-dark-blue);
 }
 
 .socials {
@@ -140,6 +140,9 @@ main .body-text p {
     gap: 0.8rem;
 }
 
+.hide {
+    display: none;
+}
 
 @media (min-width: 500px) {
     body {
@@ -175,29 +178,38 @@ main .body-text p {
         margin: 1rem 0 0 0;
     }
 
-    #share_desktop {
+    .share_desktop {
         position: absolute;
-        top: 0;
-        left: 0;
         width: auto;
         height: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 22.8rem;
-        margin-left: 57.5rem;
+        margin-top: 128px;
+        margin-left: 490px;
     }
 
-    #share_desktop .socials {
+    .share_desktop .socials {
         background-color: var(--very-dark-grayish-blue);
-        border-radius: 0.6rem;
-        padding: 1.3rem 2rem;
-        /* display: none; */
+        border-radius: 0.7rem;
+        padding: 1.2rem 2rem;
     }
 
-    #share_desktop svg {
-        width: 40px;
-        height: 40px;
-        fill: red;
+    .social_svg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .share_desktop svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--very-dark-grayish-blue);
+        position: absolute;
+        margin-top: 1.1rem;
+    }
+
+    .hide {
+        display: none;
     }
 }
